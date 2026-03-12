@@ -119,8 +119,8 @@ function LandingPage({ onStart }) {
 
             <div className="feature-card">
               <div className="feature-icon">🎯</div>
-              <h3>6 Core Gestures</h3>
-              <p>Essential communication covered: Yes, No, Hello, Stop, Help, Thank You.</p>
+              <h3>5 Core Gestures</h3>
+              <p>Essential communication covered: Yes, Ok, Hello, Stop, Help.</p>
             </div>
 
             <div className="feature-card">

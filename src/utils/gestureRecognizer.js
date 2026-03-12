@@ -67,8 +67,8 @@ class GestureRecognizer {
   }
 
   isFingerExtended(tip, pip) {
-    return tip.y < pip.y;
-  }
+  return tip.y < pip.y - 0.02;
+}
 
   // ─── Gestures ────────────────────────────────────────────────────
 
@@ -91,6 +91,7 @@ class GestureRecognizer {
   // Both thumb and pinky extended, middle fingers curled
   // Like making a heart shape with one hand
   isLove(landmarks) {
+    /*
     const thumbTip = landmarks[4];
     const thumbIP = landmarks[3];
     const indexTip = landmarks[8];
@@ -124,6 +125,7 @@ class GestureRecognizer {
     return thumbExtended && pinkyExtended &&
       indexCurled && middleCurled &&
       ringCurled && goodSpread;
+      */
   }
 
   // 3. OK 👌 - Circle with thumb + index, others extended
@@ -187,6 +189,7 @@ class GestureRecognizer {
 
   // 5. NO 👎 - Thumbs down
   isThumbsDown(landmarks) {
+    /*
     const thumbTip = landmarks[4];
     const indexTip = landmarks[8];
     const indexPIP = landmarks[6];
@@ -208,6 +211,7 @@ class GestureRecognizer {
     const curledCount = [indexCurled, middleCurled, ringCurled, pinkyCurled].filter(Boolean).length;
 
     return thumbPointingDown && curledCount >= 3;
+    */
   }
 
   // 6. STOP ✋ - Open palm, fingers together
@@ -236,6 +240,7 @@ class GestureRecognizer {
 
   // 7. THANK YOU 🙏 - Prayer position, centered
   isThankYou(landmarks) {
+    /*
     const thumbTip = landmarks[4];
     const indexTip = landmarks[8];
     const middleTip = landmarks[12];
@@ -257,6 +262,7 @@ class GestureRecognizer {
     const centered = Math.abs(wrist.x - 0.5) < 0.3;
 
     return indexExtended && middleExtended && ringExtended && pinkyExtended && fingersTogether && centered;
+    */
   }
 
 
@@ -285,6 +291,7 @@ class GestureRecognizer {
 
   // 9. EAT/DRINK - Hand near mouth
   isEatDrink(landmarks) {
+    /*
     const thumbTip = landmarks[4];
     const indexTip = landmarks[8];
     const wrist = landmarks[0];
@@ -296,6 +303,7 @@ class GestureRecognizer {
     const forward = wrist.z < -0.02;
 
     return (fingersPinched || thumbIndexDist < 0.15) && nearFace && forward;
+    */
   }
 
   // Smooth gesture detection

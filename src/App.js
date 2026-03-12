@@ -39,13 +39,13 @@ function App() {
  const availableGestures = [
   { emoji: '👍', name: 'YES', desc: 'Thumbs up' },
   { emoji: '👌', name: 'OK', desc: 'Circle with thumb & index' },
-  { emoji: '👎', name: 'NO', desc: 'Thumbs down' },
+ // { emoji: '👎', name: 'NO', desc: 'Thumbs down' },
   { emoji: '👋', name: 'HELLO', desc: 'Open palm, fingers spread' },
   { emoji: '✋', name: 'STOP ', desc: 'Palm forward, fingers together' },
   { emoji: '', name: 'HELP', desc: 'Hand raised high' },
-  { emoji: '🙏', name: 'THANK YOU', desc: 'Prayer position, centered' },
-  { emoji: '🫶', name: 'LOVE', desc: 'Thumb & pinky out, middle curled' },
-  { emoji: '', name: 'HUNGRY', desc: 'Hand near mouth' }
+ // { emoji: '🙏', name: 'THANK YOU', desc: 'Prayer position, centered' },
+  //{ emoji: '🫶', name: 'LOVE', desc: 'Thumb & pinky out, middle curled' },
+ // { emoji: '', name: 'HUNGRY', desc: 'Hand near mouth' }
 ];
   useEffect(() => {
     gestureRecognizerRef.current = new GestureRecognizer();
